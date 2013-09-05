@@ -1,4 +1,8 @@
-class dotdeb($key = 'http://www.dotdeb.org/dotdeb.gpg', $lenny_php53 = '') {
-    class{ "dotdeb::install":
+class dotdeb (
+  $key           = 'http://www.dotdeb.org/dotdeb.gpg',
+  $squeeze_php54 = false,
+  $wheezy_php55  = false
+) {
+    class { 'dotdeb::install':
     } -> anchor { 'dotdeb::end': }
 }
