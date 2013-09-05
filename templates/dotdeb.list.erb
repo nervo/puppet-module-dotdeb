@@ -5,7 +5,7 @@
     deb http://packages.dotdeb.org squeeze all
     deb-src http://packages.dotdeb.org squeeze all
 
-    <% if $dotdeb::squeeze_php54 %>
+    <% if @php54 %>
     deb http://packages.dotdeb.org squeeze-php54 all
     deb-src http://packages.dotdeb.org squeeze-php54 all
     <% end %>
@@ -14,8 +14,9 @@
     deb http://packages.dotdeb.org wheezy all
     deb-src http://packages.dotdeb.org wheezy all
 
-    <% if $dotdeb::wheezy_php55 %>
+    <% if @php55 %>
     deb http://packages.dotdeb.org wheezy-php55 all
     deb-src http://packages.dotdeb.org wheezy-php55 all
     <% end %>
+
 <% end %>
